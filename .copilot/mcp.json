@@ -1,0 +1,82 @@
+
+  "mcpServers": {
+    "optionVI": {
+      "command": "python",
+      "args": [
+        "server.py"
+      ],
+      "cwd": "./Option-VI-Spring-Cleaner-",
+      "env": {
+        "OPTION_VI_API_KEY": "${secrets.OPTION_VI_API_KEY}"
+      }
+    }
+  }
+}# server.py (example)
+from mcp import MCPServer
+
+server = MCPServer()
+
+@server.method()
+def clean_text(input: str) -> str:
+    return input.strip().lower()
+
+server.run()
+
+
+{
+  "mcpServers": {
+    "Option-VI-Spring-Cleaner": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "Option-VI-Spring-Cleaner",
+      "env": {
+        "STREAMLIT_URL": "https://prcbfyum7djayrwwzhsfqr.streamlit.app",
+        "ARK_DNA": "Chrystallized-Busline"
+      }
+    }
+  }
+}
+
+
+{
+  "mcpServers": {
+    "Option-VI-Spring-Cleaner": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "Option-VI-Spring-Cleaner-",
+      "env": {
+        "STREAMLIT_DASHBOARD_URL": "https://prcbfyum7djayrwwzhsfqr.streamlit.app",
+        "CRYSTALLINE_BUSLINE_SECRET": "${secrets.OPTION_VI_SECRET}"
+      }
+    }
+  }
+}
+
+
+
+{
+  "mcpServers": {
+    "Option-VI-Spring-Cleaner": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "Option-VI-Spring-Cleaner",
+      "env": {
+        "STREAMLIT_DASHBOARD_URL": "https://prcbfyum7djayrwwzhsfqr.streamlit.app",
+        "CRYSTALLINE_BUSLINE_SECRET": "${secrets.OPTION_VI_SECRET}"
+      }
+    }
+  }
+{
+  "mcpServers": {
+    "Option-VI-Spring-Cleaner": {
+      "command": "python",
+      "args": ["server.py"],
+      "cwd": "Option-VI-Spring-Cleaner",
+      "env": {
+        "STREAMLIT_DASHBOARD_URL": "https://prcbfyum7djayrwwzhsfqr.streamlit.app",
+        "CRYSTALLINE_BUSLINE_SECRET": "${secrets.OPTION_VI_SECRET}"
+      }
+    }
+  }
+}
+}
